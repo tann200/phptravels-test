@@ -1,0 +1,30 @@
+{
+  "output": "./output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "http:\\phptravels.net",
+      "browser": "chrome"
+    },
+    "SeleniumWebdriver": {
+      "url": "http:\\phptravels.net",
+      "browser": "chrome"
+    }
+  },
+  "include": {
+    "I": "./steps_file.js",
+    "adminLoginPage": "./pages/adminLogin.js",
+    "supplierLoginPage": "./pages/supplierLogin.js"
+  },
+  "mocha": {
+       "reporterOptions": {
+      "reportDir": "output"
+      }
+
+  },
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "tests": "./*_test.js",
+  "timeout": 10000,
+  "name": "phptravels"
+}
