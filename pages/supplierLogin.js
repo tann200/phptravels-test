@@ -10,7 +10,7 @@ module.exports = {
   // setting locators
   fields: {
     email: 'email',
-    password: 'password',
+    password: 'password'
   },
   submitButton: 'Login',
 

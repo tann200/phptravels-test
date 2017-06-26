@@ -2,29 +2,26 @@
   "output": "./output",
   "helpers": {
     "WebDriverIO": {
-      "url": "http:\\phptravels.net",
-      "browser": "chrome"
-    },
-    "SeleniumWebdriver": {
-      "url": "http:\\phptravels.net",
-      "browser": "chrome"
+      "url": "http://www.phptravels.net/",
+      "browser": "chrome",
+      "windowSize": "maximize"
     }
   },
   "include": {
     "I": "./steps_file.js",
     "adminLoginPage": "./pages/adminLogin.js",
-    "supplierLoginPage": "./pages/supplierLogin.js"
+    "supplierLoginPage": "./pages/supplierLogin.js",
+    "userinfoPage": "./pages/userinfo.js"
   },
   "mocha": {
-       "reporterOptions": {
+    "reporterOptions": {
       "reportDir": "output"
-      }
-
+    }
   },
   "bootstrap": false,
   "teardown": null,
   "hooks": [],
-  "tests": "./*_test.js",
+  "tests": "./tests/*_test.js",
   "timeout": 10000,
   "name": "phptravels"
 }
