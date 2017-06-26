@@ -1,4 +1,4 @@
-//const helpers = require('../helpers.js');
+
 
 Feature('I as an Admin want add a new tour');
 //First the admin has to be logged in

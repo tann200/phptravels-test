@@ -1,3 +1,5 @@
+//This test is work in progress
+
 Feature('I as a supplier want to add a new product');
 Before((I, supplierLoginPage) => { // or Background
     I.amOnPage('/supplier');
@@ -10,6 +12,7 @@ Before((I, supplierLoginPage) => { // or Background
 
 
 Scenario('Supplier adds a new product', (I) => {
+	i.amOnPage('/supplier/cars');
 	
 
 

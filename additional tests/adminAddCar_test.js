@@ -1,6 +1,6 @@
 //const helpers = require('../helpers.js');
 
-Feature('I as an Admin want to  a new car');
+Feature('I as an Admin want add a new car');
 //First the admin has to be logged in
 Before((I, adminLoginPage) => { // or Background
     I.amOnPage('/admin');
@@ -26,15 +26,13 @@ Scenario('Admin adds a new car', (I)=>{
   I.pressKey('BETH');
   I.wait(5);
   I.pressKey('Arrow_Down');
-  I.wait(2);
-  //I.pressKey('Arrow_Down');
+  I.pressKey('Arrow_Down');
   I.pressKey('Enter');
   I.pressKey('Tab');
   I.pressKey('BETH');
   I.wait(5);
   I.pressKey('Arrow_Down');
-  I.wait(2);
-  //I.pressKey('Arrow_Down');
+  I.pressKey('Arrow_Down');
   I.pressKey('Enter');
   I.pressKey('Tab');
   I.pressKey('200');
