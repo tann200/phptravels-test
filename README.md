@@ -17,7 +17,7 @@
 
 # Unzip or clone the tests package to Your users home folder.
 
-#Install the mochawesome reporter to the project folder:
+# Install the mochawesome reporter to the project folder:
 
 	npm install --save-dev mochawesome
 
