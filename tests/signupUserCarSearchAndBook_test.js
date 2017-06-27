@@ -1,3 +1,15 @@
+Feature('I as a existing user want to book a car');
+//First the user has to be created
+Before((I, userinfoPage) => { // or Background
+    I.amOnPage('/register');
+    // Send user information: ('fname','lname'.'phone','email','password','password2')
+    userinfoPage.sendForm('testuser1','testuserlastname','6565552','testmail5@testmail.com','demopass','demopass');
+    I.pressKey('Enter');
+    I.saveScreenshot('Userinfo_register.png',true);
+    I.wait(3);
+    I.seeInCurrentUrl('http://www.phptravels.net/account');
+    I.saveScreenshot('Userinfo_loggedin.png',true);
+  });
 
 Scenario('Existing user searches for a car, books a car', (I) => {
 	//I need to start on page /cars, because the site is developed without taking automation into consideration.
@@ -21,18 +33,12 @@ Scenario('Existing user searches for a car, books a car', (I) => {
   I.click('//button[@type="submit"]');
   //I.waitForElement('Personal Information');
   //I fill out my personal information, this could be taken from another helper in the future.
-  I.click('#signintab');
-  // Following should be in a separate helper file.
-  I.fillField('username','user@phptravels.com');
-  I.fillField('password','demouser');
-  I.fillField('//*[@id="loginform"]/div[4]/div/textarea','Test additional information 12355..');
-  I.pressKey('Tab');
   I.saveScreenshot('Cars_personaldetails.png',true);
   I.seeElement('//button[@type="submit"]');
   I.click('//button[@type="submit"]');
   //I verify that I am on the correct page and invoice is shown correctly
   I.waitForElement('//button[contains(., "Pay on Arrival")]',7);
-  //Following should be for dealing with the alert, but for some reason fails
+  //Following should be for dealing with the alert, but for some reason fail
   //I.executeScript($(window.confirm = function(msg){return true;}));
   I.click('//button[contains(., "Pay on Arrival")]');
   
