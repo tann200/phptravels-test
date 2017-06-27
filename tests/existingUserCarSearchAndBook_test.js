@@ -26,8 +26,7 @@ Scenario('Existing user searches for a car, books a car', (I) => {
   I.fillField('username','user@phptravels.com');
   I.fillField('password','demouser');
   I.fillField('//*[@id="loginform"]/div[4]/div/textarea','Test additional information 12355..');
-  //I.pressKey('Tab');
-  //I.fillField('Test additional information 12355..');
+  I.pressKey('Tab');
   I.saveScreenshot('Cars_personaldetails.png',true);
   I.seeElement('//button[@type="submit"]');
   I.click('//button[@type="submit"]');

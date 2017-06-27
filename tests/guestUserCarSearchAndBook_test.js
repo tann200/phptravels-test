@@ -33,6 +33,7 @@ Scenario('New user searches for a car, books a car', (I) => {
   I.pressKey('Enter');
   I.pressKey('Tab');
   I.pressKey('This is additional information 1234567.-somechars+!"#¤%&');
+  I.pressKey('Tab');
   I.saveScreenshot('Cars_personaldetails.png',true);
   I.seeElement('//button[@type="submit"]');
   I.click('//button[@type="submit"]');
