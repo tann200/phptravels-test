@@ -31,7 +31,7 @@ Scenario('Existing user searches for a car, books a car', (I) => {
   //Here a verification should be made that I am on the correct cars details page.
   I.seeElement('//button[@type="submit"]');
   I.click('//button[@type="submit"]');
-  //I.waitForElement('Personal Information');
+  //I.waitForElement('Personal Information'); // This assertion also fails sometimes, so it's commented out.
   //I fill out my personal information, this could be taken from another helper in the future.
   I.saveScreenshot('Cars_personaldetails.png',true);
   I.seeElement('//button[@type="submit"]');
