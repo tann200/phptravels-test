@@ -20,8 +20,6 @@ Scenario('Admin adds a hotel', (I)=>{
   I.click('Add');
   I.seeElement('hotelstatus')
   I.selectOption('hotelstatus','Yes');
-  //I.fillField('#hotelname','Best Marigold Hotel')
-  I.fillField('#document','Best Marigold Hotel')
   I.selectOption('hotelstars','5');
   I.selectOption('hoteltype','Villa');
 
