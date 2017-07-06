@@ -27,6 +27,7 @@ Scenario('Admin adds a new car', (I)=>{
   I.wait(5);
   I.pressKey('Arrow_Down');
   I.wait(2);
+  //Uncomment following line to choose another pickup location.
   //I.pressKey('Arrow_Down');
   I.pressKey('Enter');
   I.pressKey('Tab');
@@ -34,6 +35,7 @@ Scenario('Admin adds a new car', (I)=>{
   I.wait(5);
   I.pressKey('Arrow_Down');
   I.wait(2);
+    //Uncomment following line to choose another pickup location.
   //I.pressKey('Arrow_Down');
   I.pressKey('Enter');
   I.pressKey('Tab');
@@ -43,6 +45,6 @@ Scenario('Admin adds a new car', (I)=>{
   I.pressKey('Enter');
   // Some good assertion that user is on cars management page is needed here.
   // I wait for the Cars management page to load and take a screenshot to verify my car was added.
-  //I.seeInCurrentUrl('http://www.phptravels.net/admin/cars/');
+  //I.seeInCurrentUrl('http://www.phptravels.net/admin/cars/'); //This assertion fails sometimes and needs a better option.
   I.saveScreenshot('cars_list.png',true)
   });
